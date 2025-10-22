@@ -30,12 +30,17 @@ public class Author {
     public double calculateRoyalties(){
         //For each loop to loop through the titles array and return the overall royalties for the author
 
+        //total variable to hold the running sum
+        double total = 0;
 
-
-
+        //Goes through the arraylist and adds the royalties in total, for all the audoBooks/PrintedBooks that is in the arrayList
         for(Title title : titles){
-
+            total += title.calculateRoyalty();
         }
+
+        //Return the royalty total
+        return total;
+
     }
 
 
