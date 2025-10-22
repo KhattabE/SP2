@@ -19,15 +19,26 @@ public abstract class Title {
 
     //Method to calculate the royalties
     public double calculateRoyalty(){
-        return 0;
+        return calculatePoints() * RATE;
     }
 
 
 
     //Abstract method that will(must) be implemented in the inheriting sub classes
-    public abstract double calculatePoints();
+    protected abstract double calculatePoints();
 
-    public abstract double convertLiteratureType();
+
+    //The method will be used to check which type of literature the audioBook or PrintedBook is, and it will give points according to that
+    protected double convertLiteratureType() {
+        //Will use enhanced switch case to go through every type of literature type, and will make it return the correct one
+        return switch (getLiteratureType()) {
+            case "BI", "TE" -> 3.0;
+            case "LYRIK" -> 6.0;
+            case "SKØN" -> 1.7;
+            case "FAG" -> 1.0;
+            default -> 0.0;
+        };
+    }
 
 
 

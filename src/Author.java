@@ -21,12 +21,21 @@ public class Author {
 
     //Method to add titles
     public void addTitle(Title title){
+        //Will add some audiobooks first
+        titles.add(new AudioBook("The Secret Of The Universe", "LYRIK", 120, 5));
 
     }
 
 
     public double calculateRoyalties(){
-        return 0;
+        //For each loop to loop through the titles array and return the overall royalties for the author
+
+
+
+
+        for(Title title : titles){
+
+        }
     }
 
 
