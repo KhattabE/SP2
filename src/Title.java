@@ -12,10 +12,17 @@ public abstract class Title {
         this.literatureType = literatureType;
     }
 
+    //Getter so i can use it inside the audio book and book classes, when i am looking for Literature Type
+    public String getLiteratureType() {
+        return literatureType;
+    }
+
     //Method to calculate the royalties
     public double calculateRoyalty(){
         return 0;
     }
+
+
 
     //Abstract method that will(must) be implemented in the inheriting sub classes
     public abstract double calculatePoints();
