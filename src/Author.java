@@ -21,12 +21,19 @@ public class Author {
 
     //Method to add titles
     public void addTitle(Title title){
-        //Will add some audiobooks first
-        titles.add(new AudioBook("The Secret Of The Universe", "LYRIK", 120, 5));
+        //Will add some audiobooks
+        titles.add(new AudioBook("The Secret Of The Universe", "LYRIK", 120, 320));
+        titles.add(new AudioBook("Coding ourselfs to the future", "FAG", 450, 23500));
+        titles.add(new AudioBook("MoaF The Strongest Man", "LYRIK", 25, 5436));
 
+        //Will add some PrintedBooks
+        titles.add(new PrintedBook("MoaF and the little The Little Mermaid", "BI", 365, 3545100));
+        titles.add(new PrintedBook("Amandnu and the Seven Dwarfs", "TE", 545, 1200000));
+        titles.add(new PrintedBook("Learn Java", "FAG", 954, 342000));
     }
 
 
+    //Method for calculating the total royalties that the author will get from their audioBooks/PrintedBooks
     public double calculateRoyalties(){
         //For each loop to loop through the titles array and return the overall royalties for the author
 
